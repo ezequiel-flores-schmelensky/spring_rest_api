@@ -195,7 +195,7 @@ public class ClienteRestController {
 			
 			String nombreArchivo = null;
 			try {
-				uploadService.copiar(archivo);
+				nombreArchivo = uploadService.copiar(archivo);
 			} catch (IOException e) {
 				response.put("mensaje", "El Error al subir la imagen del cliente");
 				response.put("error", e.getMessage().concat(": ").concat(e.getCause().getMessage()));
